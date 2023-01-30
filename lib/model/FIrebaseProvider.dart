@@ -22,7 +22,7 @@ class FirebaseProvider extends ChangeNotifier {
   Future<void> updatePost(dynamic document, String postC) async {
     await docRef.doc(document.id).update({
       'post': postC,
-      'createdAt': Timestamp.fromDate(now),
+      'updatedAt': Timestamp.fromDate(now),
     });
     notifyListeners();
   }
